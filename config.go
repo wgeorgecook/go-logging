@@ -38,7 +38,7 @@ func Init(opts ...configOption) error {
 		return nil
 	}
 
-	var c = &config{
+	c = &config{
 		level: INFO,
 	}
 	for _, opt := range opts {
