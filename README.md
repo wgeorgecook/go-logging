@@ -15,3 +15,7 @@ application exits to flush the underlying logger.
 Go Logging exposes differing log functions for each level exposed as options, DEBUG, INFO, ERROR, and FATAL. 
 Calling functions lower than the provided or default level are rendered no-op. EG, if the provided level is ERROR, 
 then calls to `gologging.Info()` and `gologging.Debug()` are no-op. 
+
+## Output
+Debug level logging is a human readable output using a `zap.NewDevelopment()` logger. All others
+use JSON output via a `zap.NewProduction()`.
