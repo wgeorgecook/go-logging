@@ -51,7 +51,7 @@ func setZapFields(f *fields) []zapcore.Field {
 
 // Info logs the provided LogOptions using the Zap structured
 // logger, provided the level provided to Init() is <= INFO.
-func (c *config) Info(msg string, opts ...logOption) {
+func Info(msg string, opts ...logOption) {
 	if c.level > INFO {
 		return
 	}
@@ -64,7 +64,7 @@ func (c *config) Info(msg string, opts ...logOption) {
 
 // Debug logs the provided LogOptions using the Zap structured
 // logger, provided the level provided to Init() is <= DEBUG.
-func (c *config) Debug(msg string, opts ...logOption) {
+func Debug(msg string, opts ...logOption) {
 	if c.level > DEBUG {
 		return
 	}
@@ -76,7 +76,7 @@ func (c *config) Debug(msg string, opts ...logOption) {
 
 // Error logs the provided error and LogOptions using the Zap structured
 // logger, provided the level provided to Init() is <= ERROR.
-func (c *config) Error(msg string, err error, opts ...logOption) {
+func Error(msg string, err error, opts ...logOption) {
 	if c.level > ERROR {
 		return
 	}
@@ -90,7 +90,7 @@ func (c *config) Error(msg string, err error, opts ...logOption) {
 
 // Fatal logs the provided LogOptions using the Zap structured
 // logger, provided the level provided to Init() is <= FATAL.
-func (c *config) Fatal(msg string, opts ...logOption) {
+func Fatal(msg string, opts ...logOption) {
 	if c.level > FATAL {
 		return
 	}
